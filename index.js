@@ -23,7 +23,9 @@ mongoose.connect(url.mongoURI, {
 let port = 5000 || process.env.PORT  
 
 routes(router) 	
-
+app.get('/', (req, res) => {
+    res.json('Heroku Deployment Success!')
+})
 // const corsOptions = {
 // 	origin: ['http://localhost:3000', 'https://mern-stack-course-react.herokuapp.com'],
 // 	credentials:true,
