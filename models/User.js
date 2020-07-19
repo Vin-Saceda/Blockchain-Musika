@@ -18,12 +18,6 @@ const userSchema = mongoose.Schema(
         password: {
             type: String,
             minlength: 5
-        },
-        token: {
-            type: String
-        },
-        tokenExp: {
-            type: Number
         }
     }
 )
