@@ -26,12 +26,13 @@ routes(router)
 app.get('/', (req, res) => {
     res.json('Heroku Deployment Success!')
 })
-// const corsOptions = {
-// 	origin: ['http://localhost:3000', 'https://mern-stack-course-react.herokuapp.com'],
-// 	credentials:true,
-// }
+const corsOptions = {
+    // origin: ['http://localhost:3000', 'https://arcane-journey-33417.herokuapp.com'],
+    origin: 'http://localhost:3000',
+	credentials:true,
+}
 
-// app.use(cors(corsOptions))	 
+app.use(cors(corsOptions))	 
 app.use(bodyParser.json())
 
 app.use('/api', router)  
